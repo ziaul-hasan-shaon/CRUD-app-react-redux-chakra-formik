@@ -51,12 +51,12 @@ function DisplayData() {
                         </CardBody>
                         <CardFooter display='flex' justifyContent="space-between">
                             <Link>
-                                <Button onClick={onOpen} bg='antiquewhite'>Edit Data <EditData isOpen={isOpen} onClose={onClose} state={user}></EditData></Button>
+                                <Button onClick={onOpen} bg='antiquewhite'>Edit Data</Button>
                             </Link>
                             <Button onClick={() => handleDelete(id)} bg='red.500'>Delete user</Button>
                         </CardFooter>
                         {/* <AddModal ></AddModal> */}
-                        
+                        <EditData isOpen={isOpen} onClose={onClose} state={user}></EditData>
                     </Card>
                 })}
             </SimpleGrid>
