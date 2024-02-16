@@ -3,6 +3,7 @@ import { Box, Button, Heading, Text } from '@chakra-ui/react'
 import moment from 'moment'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Time from './Time'
 
 function Home() {
     return (
@@ -10,7 +11,7 @@ function Home() {
             <Box maxW='400px' mx='auto' mt='50px' textAlign='center' py={8} px={5} bg='purple.400' boxShadow='xl' borderRadius='lg'>
                 <Heading fontSize='28px' color='antiquewhite' my={4}>{moment().format('dddd')}</Heading>
                 <Heading fontSize='28px' color='antiquewhite' my={4}>{moment().format('MMMM Do YYYY')}</Heading>
-                <Heading fontSize='28px' color='antiquewhite' my={4}>{moment().format('LTS')}</Heading>
+                <Time></Time>
             </Box>
             <Box maxW='600px' mx='auto' my='60px' textAlign='center'>
                 <Heading fontSize={40} fontWeight="bold" color='purple.400' my={10}>Welcome to Users CRUD App</Heading>
