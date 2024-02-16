@@ -8,15 +8,15 @@ import { updatUser } from '../app/features/userSlice'
 import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text } from '@chakra-ui/react'
 
 
-function EditData({ isOpen, onClose, state }) {
+function EditData({ isOpen, onClose, id }) {
 
     // const location = useLocation()
     // console.log(location)
 
+    const user = useSelector(state => state.userReducer.users.find(user => user.id === id))
 
-    const [editUser, setEditUser] = useState(state)
+    const [editUser, setEditUser] = useState(user)
 
-    // const user = useSelector(state => state.userReducer.users.map(user => user))
     console.log(editUser)
     const { name, email, password, confirm, address, tagline } = editUser
     console.log(name)
