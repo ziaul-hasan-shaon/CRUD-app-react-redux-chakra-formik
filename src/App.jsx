@@ -7,7 +7,6 @@ function App() {
   return (
     <>
       <Index></Index>
-      <h1>CRUD app with react redux chakraUi Formik</h1>
     </>
   )
 }
